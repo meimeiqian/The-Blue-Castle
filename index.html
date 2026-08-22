@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111a2b">
+  <link rel="icon" href="data:,">
+  <title>蓝色城堡｜世界总览</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" class="app" aria-label="蓝色城堡世界总览">
+    <div class="backdrop" aria-hidden="true"></div>
+    <section id="viewport" class="viewport" aria-label="S00 世界总览">
+      <div id="camera" class="camera">
+        <img class="world-image" src="assets/s00.png" alt="云雾山谷中的蓝色城堡、花园、热气球、小镇与瀑布">
+        <div class="ambient" aria-hidden="true">
+          <div class="mist mist-a"></div><div class="mist mist-b"></div>
+          <div class="local garden-motion"></div><div class="local balloon-motion"></div>
+          <div class="local waterfall-shimmer"></div>
+          <div class="window-light castle-light"></div><div class="window-light town-light"></div>
+        </div>
+        <svg id="hotspot-layer" class="hotspot-layer" viewBox="0 0 2048 1152" preserveAspectRatio="none" aria-label="可探索区域"></svg>
+      </div>
+    </section>
+
+    <header class="title-card">
+      <p class="eyebrow">THE BLUE CASTLE · S00</p>
+      <h1>世界总览</h1>
+      <p>雾在山谷间醒来。选择一处，听它说话。</p>
+    </header>
+
+    <button id="motion-toggle" class="edge-control motion-toggle" type="button" aria-pressed="false">减少动态：关</button>
+    <button id="back-button" class="edge-control back-button" type="button" hidden>← 返回总览</button>
+
+    <div id="tooltip" class="tooltip" role="status" aria-live="polite"></div>
+    <aside id="scene-card" class="scene-card" aria-live="polite" hidden>
+      <p id="scene-kicker" class="eyebrow"></p><h2 id="scene-title"></h2>
+      <p>第一阶段占位界面</p>
+    </aside>
+    <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+    <p class="hint">Tab 选择 · Enter 探索 · Esc 返回</p>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
